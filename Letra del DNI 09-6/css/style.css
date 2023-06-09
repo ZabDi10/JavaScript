@@ -26,6 +26,7 @@ h1{
     border-radius: 110px;
 }
 #div1{
+    /* Pone centrado input y boton */
     display: flex;
     align-items: center;
     
