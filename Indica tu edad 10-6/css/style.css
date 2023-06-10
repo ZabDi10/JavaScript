@@ -1,4 +1,5 @@
 *{
+    text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
@@ -10,20 +11,13 @@ h1{
     margin: auto;
     text-align: center;
 }
-#imgDni, #div1{
+#div1{
     width: 20%;
     margin: auto;
-
 }
 #calcular{
-    height: 60px;
-    width: 60px;
     margin: auto;
     cursor: pointer; 
-    color: white; 
-    background-color: rgb(0, 26, 255); 
-    border: none; 
-    border-radius: 110px;
 }
 #div1{
     /* Pone centrado input y boton */
