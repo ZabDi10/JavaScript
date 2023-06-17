@@ -1,23 +1,33 @@
 .menu{
     list-style: none;
-    border: 1px solid black;
-    /* border-radius: 10px; */
+    border: 1px solid #282A35;
     text-align: center;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
+    background-color: #282A35;
     padding: 0;
-    margin: -10px;
+    margin: -8px;
+    position: sticky;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
     
 }
 .menu li{
     float: left;
+    
 }
 .menu a{
     display: block;
     padding: 8px;
     color: rgb(255, 255, 255);
+    text-decoration: none;
+    
 }
 .menu a:hover{
     background-color: white;
     color: rgb(0, 0, 0);
+    
+}
+.home{
+    background-color: #9b0303;
 }

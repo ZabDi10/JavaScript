@@ -1,4 +1,22 @@
+/* CSS de div con botones bonitos */
 *{
     text-align: center;
     margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div{
+    width: 400px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+div button{
+    background-color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    margin: 5px;
+
 }
