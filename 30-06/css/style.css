@@ -1,0 +1,59 @@
+*{
+    text-align: center;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+p{
+    margin: 10px;
+}
+
+.logo img{
+    max-width: 50%;
+    float: left;
+    padding-left: 25%;
+    padding-bottom: 5%;
+    margin: auto;
+}
+
+.titulo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ED7B30;
+    padding-top: 50px;
+    text-align: center;
+    /* font-size: xx-large; */
+    max-width: 100%;
+}
+.logo{
+    max-width: 30%;
+}
+section{
+    clear: both;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 70%;
+    margin: auto;
+}
+.boton{
+    background-color: #0F2F62;
+    padding: 10px;
+    color: white;
+    border: 1px solid #0F2F62;
+    cursor: pointer;
+}
+.boton:hover{
+    color: #ED7B30;
+    background-color: white;
+    border: 1px solid #ED7B30;
+    padding: 10px;
+}
+input#peso{
+    padding: 10px 0;
+    border: none;
+    border: 1px solid #0F2F62;
+}
+#total{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0F2F62;
+    text-align: center;
+}
