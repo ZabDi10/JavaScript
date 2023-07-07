@@ -1,0 +1,163 @@
+/* 
+CSS Media Queries => Responsive Design  media queries, es mediante el cuál podemos hacer excepciones para que unos determinados estilos de diseño sólo se apliquen si se cumplen una serie de condiciones, generalmente relacionadas con el dispositivo mediante el cuál se esta viendo la pagina
+
+Las reglas media queries (También denominadas MQ a veces) son un tipo de reglas de CSS que permiten crear un bloque de codigo que solo se procesara en los dispositivos que cumplan los criterios especificados como condicion.
+
+la sintaxis de la regla @media es la siguiente:
+
+Regla
+@media (<condicion>) => Si se cumple la condicion, se aplican los estilos de su interior. 
+@media not (<condicion>) => Si no se cumple la condicion, se aplican los estilos de su interior.
+
+Ejemplos:
+@media (*condición*) {
+    .container {
+        background: green;
+    }
+}
+@media not (*condición*) {
+    .container {
+        background: red;
+    }
+}
+*/
+
+
+
+.container{
+    width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto; /*sino lo aplica al colocar poner !important*/
+
+}
+.card, .card2{
+    width: 500px;
+    height: auto;
+    border: 1px solid rgb(220, 219, 219);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+}
+.card p{
+    padding: 0 50px;
+}
+.card{
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+.card2{
+    box-shadow: rgba(0, 230, 246, 0.4) 0px 30px 90px;
+    background-color: rgba(255, 0, 60, 0.329)
+}
+/* CSS */
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, rgb(255, 0, 60) 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 600px) { /* esto a partir de 600 para arriba por min si fuese mas serian todos los que esten por debajo*/
+  .button-49,
+  .button-49:after {
+    width: 500px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+@media (width<=800px){ /* esto se aplica a todos los dispositivos menores de 800 px*/
+    .card, .card2{
+        width: 70%;
+        height: auto;
+    }
+    .container{
+        width: auto;
+    }
+
+}

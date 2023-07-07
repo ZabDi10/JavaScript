@@ -10,10 +10,14 @@ h1{
     margin: auto;
     text-align: center;
 }
-#imgDni, #div1{
+#imgDni{
     width: 20%;
     margin: auto;
 
+}
+#div1{
+    width: 15%;
+    margin: auto;
 }
 #calcular{
     height: 60px;
@@ -34,4 +38,71 @@ h1{
 #msnError{
     font-style: italic;
     color: darkred;
+}
+
+@media(width<= 1280px){
+    
+    #imgDni{
+        margin: 0px;
+        width: auto;
+    }
+    #div1{
+        width: 25%;
+        margin: auto;
+    }
+}
+@media(width<= 1000px){
+    
+    #imgDni{
+        margin: 0px;
+        width: auto;
+    }
+    #div1{
+        width: 30%;
+        margin: auto;
+    }
+}
+@media(width<= 800px){
+    
+    #imgDni{
+        margin: 0px;
+        width: auto;
+    }
+    #div1{
+        width: 40%;
+        margin: auto;
+    }
+}
+@media(width<= 600px){
+    
+    #imgDni{
+        margin: 0px;
+        width: 100%;
+    }
+    #div1{
+        width: 50%;
+        margin: auto;
+    }
+}
+@media(width<= 500px){
+    
+    #imgDni{
+        margin: 0px;
+        width: 100%;
+    }
+    #div1{
+        width: 70%;
+        margin: auto;
+    }
+}
+@media(width<= 300px){
+    
+    #imgDni{
+        margin: 0px;
+        width: 100%;
+    }
+    #div1{
+        width: 90%;
+        margin: auto;
+    }
 }
