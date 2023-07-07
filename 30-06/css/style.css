@@ -9,9 +9,9 @@ p{
 }
 
 .logo img{
-    max-width: 50%;
+    max-width: 70%;
     float: left;
-    padding-left: 25%;
+    padding-left: 15%;
     padding-bottom: 5%;
     margin: auto;
 }
@@ -56,4 +56,10 @@ input#peso{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #0F2F62;
     text-align: center;
+}
+@media(width<= 600px){
+    .logo img{
+        max-width: 100%;
+        padding-left: 0;
+    }
 }

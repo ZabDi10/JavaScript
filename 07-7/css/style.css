@@ -28,7 +28,7 @@ Ejemplos:
     width: 70%;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto; /*sino lo aplica al colocar poner !important*/
-
+    text-align: center;
 }
 .card, .card2{
     width: 500px;
