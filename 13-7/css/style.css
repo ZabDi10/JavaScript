@@ -1,0 +1,15 @@
+body{
+    background-color: rgba(230, 230, 230, 0.5);
+    font-family: 'Times New Roman', Times, serif;
+}
+hr{
+    border: 3px solid rgb(2, 2, 2);
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: -5px;
+}
+
+/* Formulario */
+#formTC, #formPP{
+    display: none;
+}

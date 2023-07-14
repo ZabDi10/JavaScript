@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Fechas</h1>
+    <p>Hoy es dia <span id="fecha"></span></p>
+    <p>Es la hora <span id="hora"></span></p>
+    <button id="boton">Actualizar Fecha</button>
+    <hr>
+    <h2>Naciste: <span id="dNaci"></span></h2>
+    <h2>Naciste: <span id="fCorta"></span></h2>
+    <h2>Naciste: <span id="fCorta2"></span></h2>
+    <hr>
+    <h3>Abre la consola F12 para ver la parte de Bea</h3>
+    <p id="edadJ"></p>
+    <input type="date" name="" id="fechaInp">
+    <button id="boton2">Leer</button>
+    <hr>
+
+    <div>
+        <h1>Validacion de formulario</h1>
+        <h3>Compra de tickets</h3>
+        <form action="" method="get" id="form">
+            <label for="nombre">Nombre Visitante:</label>
+            <input type="text" id="nombre" name="nombre" maxlength="50" required>
+            <label for="edad" >Edad</label>
+            <input type="text" id="edad" min="16" max="105" required>
+            <label for="fechaVisitante">Fecha de Visita:</label>
+            <input type="date" name="fechaVisitante" id="fechaVisitante" required>
+            <label for="cantidadAdultos">Nº de Entradas Adultos:</label>
+            <input type="number" name="cantidadAdultos" id="cantidadAdultos">
+            <label for="cantidadNinos">Nº de Entradas Niños</label>
+            <input type="number" name="cantidadNinos" id="cantidadNinos">
+            <label for="fPago">Forma de pago</label>
+            <input type="radio" name="fPago" id="fPago" value="visa">Visa
+            <input type="radio" name="fPago" id="fPago" value="masterCard">MasterCard
+            <input type="radio" name="fPago" id="fPago" value="payPal">Paypal
+            <input type="radio" name="fPago" id="fPago" value="bizum">Bizum
+
+            <div id="formTC">
+                <h4>Tarjeta de Credito</h4>
+                <label for="nombreTC">Nombre Titular:</label>
+                <input type="text" name="titular" id="titular" required>
+                <label for="nTC">Nº Tarjeta</label>
+                <input type="text" name="nTC" id="nTC" minlength="16" maxlength="16">
+                <label for="cvv">CVV</label>
+                <input type="number" name="cvv" id="cvv" minlength="3" maxlength="3">
+            </div>
+            <div id="formPP">
+                <h4>Paypal</h4>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="contrasena">Password</label>
+                <input type="password" name="contrasena" id="contrasena">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="script/duodecimo.js"></script>
+</html>
