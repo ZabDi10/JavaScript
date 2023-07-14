@@ -1,3 +1,22 @@
+body{
+    background-color: rgba(230, 230, 230, 0.5);
+    font-family: 'Times New Roman', Times, serif;
+}
+/* body{
+    background-color: rgba(230, 230, 230, 0.5);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.h{
+    color: #7B1C32;
+    
+}
+hr{
+    border: 3px solid #7B1C32;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: -5px;
+} */
 .menu{
     list-style: none;
     border: 1px solid #282A35;

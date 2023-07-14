@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Duodecimo</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Fechas</h1>
+    <h1 class="h">Duodecimo Script</h1>
+    <h2>Fechas</h2>
     <p>Hoy es dia <span id="fecha"></span></p>
     <p>Es la hora <span id="hora"></span></p>
     <button id="boton">Actualizar Fecha</button>
@@ -27,22 +28,27 @@
         <h1>Validacion de formulario</h1>
         <h3>Compra de tickets</h3>
         <form action="" method="get" id="form">
-            <label for="nombre">Nombre Visitante:</label>
-            <input type="text" id="nombre" name="nombre" maxlength="50" required>
-            <label for="edad" >Edad</label>
-            <input type="text" id="edad" min="16" max="105" required>
-            <label for="fechaVisitante">Fecha de Visita:</label>
-            <input type="date" name="fechaVisitante" id="fechaVisitante" required>
-            <label for="cantidadAdultos">Nº de Entradas Adultos:</label>
-            <input type="number" name="cantidadAdultos" id="cantidadAdultos">
-            <label for="cantidadNinos">Nº de Entradas Niños</label>
-            <input type="number" name="cantidadNinos" id="cantidadNinos">
-            <label for="fPago">Forma de pago</label>
-            <input type="radio" name="fPago" id="fPago" value="visa">Visa
-            <input type="radio" name="fPago" id="fPago" value="masterCard">MasterCard
-            <input type="radio" name="fPago" id="fPago" value="payPal">Paypal
-            <input type="radio" name="fPago" id="fPago" value="bizum">Bizum
-
+                <p><label for="nombre">Nombre Visitante:</label>
+                <input type="text" id="nombre" name="nombre" maxlength="50" required>
+                <label for="edad" >Edad</label>
+                <input type="number" id="edad" min="16" max="105" required>
+                <label for="fechaVisitante">Fecha de Visita:</label>
+                <input type="date" name="fechaVisitante" id="fechaVisitante" required>
+            </p>
+            <p>
+                <label for="cantidadAdultos">Nº de Entradas Adultos:</label>
+                <input type="number" name="cantidadAdultos" id="cantidadAdultos" minlength="0" maxlength="200">
+                <label for="cantidadNinos">Nº de Entradas Niños</label>
+                <input type="number" name="cantidadNinos" id="cantidadNinos" minlength="0" maxlength="200">
+            </p>
+            <p class="pa">
+                <label for="fPago">Forma de pago</label>
+                <p class="listaFP"><input type="radio" name="fPago" id="fPago" value="visa">Visa
+                <input type="radio" name="fPago" id="fPago" value="masterCard">MasterCard
+                <input type="radio" name="fPago" id="fPago" value="payPal">Paypal
+                <input type="radio" name="fPago" id="fPago" value="bizum">Bizum
+                </p>
+            </p>
             <div id="formTC">
                 <h4>Tarjeta de Credito</h4>
                 <label for="nombreTC">Nombre Titular:</label>
@@ -59,6 +65,9 @@
                 <label for="contrasena">Password</label>
                 <input type="password" name="contrasena" id="contrasena">
             </div>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
         </form>
     </div>
 </body>

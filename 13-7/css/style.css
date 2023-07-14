@@ -1,15 +1,78 @@
 body{
     background-color: rgba(230, 230, 230, 0.5);
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.h{
+    color: #7B1C32;
+    
 }
 hr{
-    border: 3px solid rgb(2, 2, 2);
+    border: 3px solid #7B1C32;
     border-radius: 10px;
     margin-top: 30px;
     margin-left: -5px;
 }
 
 /* Formulario */
+form{
+    text-align: left;
+}
+/* 
+Display: none esconde al elemento y deja libre el espacio que ocupa, 
+es decir, si hay un elemento arriba, abajo o a un lado, 
+este ocupa su lugar. display:hidden solo esconde el elemento 
+pero deja su espacio y tal como está
+*/
 #formTC, #formPP{
     display: none;
+}
+@media (width>=1024px){ /* PC */
+    #forma{
+        width: 50%;
+        margin: auto;
+    }
+
+}
+@media (width>=767px){ /* Tablet */
+    #forma{
+        width: 70%;
+        margin: auto;
+    }
+    
+}
+@media (width<767px){ /* Smartphone */
+    #forma{
+        width: 90%;
+        margin: auto;
+    }
+    .listaFP{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+    .pa{
+        margin: 0px;
+    }
+
+}
+
+#boton, #boton2{
+    height: 50px;
+    width: 110px;
+    border: 3px solid #7B1C32;
+    border-radius: 40px;
+    background-color: white;
+    cursor: grabbing;
+
+}
+#fechaInp{
+    height: 50px;
+    border-radius: 40px;
+    border: 3px solid #7B1C32;
+}
+#form{
+    width: 50%;
+    margin: auto;
 }

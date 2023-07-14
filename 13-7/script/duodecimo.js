@@ -51,3 +51,51 @@ boton2.addEventListener("click", ()=>{
     console.log(fechaInp.toLocaleDateString());
 })
 
+/* Script forms
+Script para validar el formulario y darle dinamismo
+*/
+/* Es necesario un load para que cargue la lista */
+window.addEventListener("change", ()=>{
+    let formPago = document.querySelectorAll("input[name='fPago']");
+    let divFormTC = document.querySelector("#formTC");
+    let divFormPP = document.querySelector("#formPP");
+    console.log(formPago);
+    if(formPago[0].checked || formPago[1].checked) {
+        console.log("entra");
+        divFormTC.style.display = "block";
+        divFormPP.style.display = "none";
+          
+    }
+    if(formPago[2].checked) {
+        console.log("entra2");
+        divFormTC.style.display = "none";
+        divFormPP.style.display = "block";
+          
+    }
+    if(formPago[3].checked) {
+        console.log("entra3");
+        divFormTC.style.display = "none";
+        divFormPP.style.display = "none";
+          
+    }
+             
+        
+    
+        
+        
+         
+    
+})
+
+let miInput = Array.from(document.querySelector("#form"));
+miInput[0].addEventListener("input", ()=>{
+    miInput[0].setCustomValidity('');
+    miInput[0].checkValidity();
+})
+miInput[0].addEventListener("invalid", ()=>{
+    miInput[0].style.backgroundColor = "#ffcdd2";
+    miInput[0].setCustomValidity("Indica el Nombre")
+    
+});
+
+
