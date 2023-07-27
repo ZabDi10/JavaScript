@@ -49,13 +49,13 @@ window.addEventListener("load", (e)=>{
             mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes sobrepeso`
             document.querySelector("#imc").style.color="green"
         }else if (calculo <=34.9 ) {
-            mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad`
+            mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad tipo 1`
             document.querySelector("#imc").style.color="yellow"
         }else if (calculo <=39.9) {
-            mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad`
+            mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad tipo 2`
             document.querySelector("#imc").style.color="#FF8F35"
         }else if(calculo >=40){
-            mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad. En cualquier caso necesitas adelgazar`
+            mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad tipo 3. En cualquier caso necesitas adelgazar`
             document.querySelector("#imc").style.color="red"
         }else if (calculo===Infinity) {
             mImc = `Tu IMC es de ${calculo.toFixed(2)}. Te crees el centro del universo EH!`
@@ -67,6 +67,10 @@ window.addEventListener("load", (e)=>{
             }
         }
 
+        if (isEmpty(mImc)) {
+            
+            document.querySelector("#imagen").src="../IMC-05.png";
+        }
         document.querySelector("#mensaje").innerHTML= msn;
         document.querySelector("#mensaje").style.color="red";
         document.querySelector("#imc").innerHTML= mImc;
@@ -83,3 +87,14 @@ window.addEventListener("load", (e)=>{
 
     })
 })
+
+
+function isEmpty(msg) {
+    if(msg != null){
+        return true;
+        
+    }else{
+        return false;
+    }
+}   
+
