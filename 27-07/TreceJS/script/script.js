@@ -11,7 +11,7 @@ e.preventDefault(); //No envia el formulario
 let mensaje = document.querySelector("#mensaje");
 let msn = "";
 let boton = document.querySelector(".boton");
-document.querySelector("#imc").innerHTML=" ";
+let imc = document.querySelector("#imc").innerHTML=" ";
 let mImc = "";
 
  
@@ -40,9 +40,24 @@ boton.addEventListener("click", ()=>{
         document.querySelector("#imc").style.color="red";
     }
     //Toda la cadena de ifs
-    if (calculo < 18.5) {
+    if (calculo <= 18.5) {
         mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes bajo peso`
         document.querySelector("#imc").style.color="blue"
+    }else if (calculo <=24.9) {
+        mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes un peso adecuado`
+        document.querySelector("#imc").style.color="blue"
+    }else if (calculo <=29.9) {
+        mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes sobrepeso`
+        document.querySelector("#imc").style.color="green"
+    }else if (calculo <=34.9 ) {
+        mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad`
+        document.querySelector("#imc").style.color="yellow"
+    }else if (calculo <=39.9) {
+        mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad`
+        document.querySelector("#imc").style.color="orange"
+    }else if(calculo >40){
+        mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes obesidad`
+        document.querySelector("#imc").style.color="red"
     }
 
     document.querySelector("#mensaje").innerHTML= msn;
@@ -54,11 +69,11 @@ boton.addEventListener("click", ()=>{
     inputs.forEach(items=>{
         items.addEventListener("focus",()=>{
         mensaje.innerHTML =" ";
-        msn=" ";
+        // msn=" ";
         })
     }) 
 
-    
+
 })
 })
 
