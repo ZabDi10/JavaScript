@@ -34,7 +34,9 @@ window.addEventListener("load", (e)=>{
         let peso = parseFloat(document.querySelector("#peso").value);
         let altura = parseFloat(document.querySelector("#altura").value);
         let calculo = peso/Math.pow(altura,2);
+
         console.log(calculo.toFixed(2));
+
         if (calculo=="" || isNaN(calculo)) {
             mImc = "Ponga los valores que aparecen en pantalla. El Peso en Kilogramos y la Altura en Metros por favor";
             document.querySelector("#imc").style.color="red";
@@ -61,6 +63,11 @@ window.addEventListener("load", (e)=>{
         }else if (calculo===Infinity) {
             mImc = `Tu IMC es de ${calculo.toFixed(2)}. Te crees el centro del universo EH!`
             document.querySelector("#imc").style.color="red"
+        }else{
+            if (calculo=="" || isNaN(calculo)) {
+                mImc = "Ponga los valores que aparecen en pantalla. El Peso en Kilogramos y la Altura en Metros por favor";
+                document.querySelector("#imc").style.color="red";
+            }
         }
 
         document.querySelector("#mensaje").innerHTML= msn;
