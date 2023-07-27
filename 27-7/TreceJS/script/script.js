@@ -37,10 +37,7 @@ window.addEventListener("load", (e)=>{
 
         console.log(calculo.toFixed(2));
 
-        if (calculo=="" || isNaN(calculo)) {
-            mImc = "Ponga los valores que aparecen en pantalla. El Peso en Kilogramos y la Altura en Metros por favor";
-            document.querySelector("#imc").style.color="red";
-        }
+        
         //Toda la cadena de ifs
         if (calculo <= 18.5) {
             mImc = `Tu IMC es de ${calculo.toFixed(2)}. Tienes bajo peso`
@@ -86,8 +83,3 @@ window.addEventListener("load", (e)=>{
 
     })
 })
-
-function cuadrado(numero) {
-    numero *= 100;
-    return (numero);
-}
