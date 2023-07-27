@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Validacion de formulario</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <form action="">
-        <p>
+    <!-- <form action="">
+      <p>
         <label for="nombre">Nombre del Usuario: </label>
-        <input type="text" name="nombre" id="nombre" class="entrada">
-        </p>
-        <p>
+        <input type="text" name="nombre" id="nombre" class="entrada" />
+      </p>
+      <p>
         <label for="pass">Contraseña: </label>
-        <input type="password" name="pass" id="pass" class="entrada">
-        </p>
-        <p>
-            <!-- <input type="submit" value="registrar" class="boton"> -->
+        <input type="password" name="pass" id="pass" class="entrada" />
+      </p>
+      <p>
+         <input type="submit" value="registrar" class="boton"> 
+        <button type="button" class="boton">Registrar</button>
+      </p>
+      
+    </form> -->
+
+    <!-- Formulario del w3 -->
+    <form action="" method="post">
+        <div class="imgcontainer">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+            <label for="nombre">Nombre del Usuario: </label>
+            <input type="text" placeholder="Enter Username" name="uname" id="nombre" class="entrada" />
+
+            <label for="pass">Contraseña: </label>
+            <input type="password" placeholder="Enter Password" name="psw"  class="entrada" id="pass" />
+
+            <label for="imc">Indice de Masa Corporal</label>
+            <input type="number" placeholder="50 kg" name="peso" id="peso">
+            <input type="number" placeholder="1.70 m" name="altura" id="altura">
+
             <button type="button" class="boton">Registrar</button>
-        </p>
-        <p id="mensaje"></p>
-        <p id="mensajepass"></p>
+            <label>
+                <input type="checkbox" checked="checked" name="remember" /> Remember
+                me
+            </label>
+        </div>
 
-
+        <div class="container" style="background-color: #f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <p id="mensaje"></p>
+        <p id="imc"></p>
+        </div>
+        
+        
     </form>
 </body>
 <script src="script/script.js"></script>
