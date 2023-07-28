@@ -29,23 +29,35 @@ function showSlides(n) {
 
 let arrayImg= new Array(4); //declarando que este array va a tener 4 elementos.
 arrayImg[0]=new Image(); //
-arrayImg[0].src="../Proyecto ZOO/img/fotaza-leones.webp";
+arrayImg[0].src="../14-7-zoo/ProyectoZOO/img/fotaza-leones.webp";
 arrayImg[1]=new Image(); //
-arrayImg[1].src="../Proyecto ZOO/img/leopardo.webp";
+arrayImg[1].src="../14-7-zoo/ProyectoZOO/img/leopardo.webp";
 arrayImg[2]=new Image(); //
-arrayImg[2].src="../Proyecto ZOO/img/erizo.webp";
+arrayImg[2].src="../14-7-zoo/ProyectoZOO/img/erizo.webp";
 arrayImg[3]=new Image(); //
-arrayImg[3].src="../Proyecto ZOO/img/suricato-abrazo.webp";
+arrayImg[3].src="../14-7-zoo/ProyectoZOO/img/suricato-abrazo.webp";
+
+
 
 //Declaramos un contador que lleve la cuenta de la imagenes que se va mostrando y comienza en 1 y termina en 4;
 let contador = 0;
 function cambiarImagen(){
-  document.querySelector("#banner").src=arrayImg[contador];
+  document.querySelector("#banner").src=arrayImg[contador].src;
   console.log(contador);
   contador++;
-  setTimeout("cambiarImagen()", 5000);
-  if (contador==3) {
+  if (contador==4) {
     contador=0;
   }
+  setTimeout("cambiarImagen()", 5000);
 }
+
+function validarFormulario() {
+    alert("Validando...");
+}
+
+window.addEventListener("load", ()=>{
+    let boton = document.querySelector("#boton");
+    // boton.addEventListener("click", validarFormulario)
+    cambiarImagen();
+})
 
