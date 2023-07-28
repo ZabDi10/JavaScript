@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada</title>
+    <link rel="stylesheet" href="css/styleCto.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="headerSup" >
+                <ul>
+                    <li>
+                        <span class="material-symbols-outlined">
+                        mail
+                        </span> 
+                        <span class="datos">info@zoodatw.es</span> 
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined">
+                        call
+                        </span> +34 955 555 555
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span> Calle Campo 84. Tomelloso. Ciudad Real. España
+                    </li>
+                </ul>
+        </header>
+    
+        <header class="header row">
+            <div class="logo col-4">
+                <img src="ProyectoZOO/iconos/favicon.webp" alt="Logo del zoo">
+            </div>
+        <div class="menu col-8">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="indexCto.html">Conocenos</a></li>
+                <li><a href="indexEtr.html">Entrada</a></li>
+            </ul>
+        </div>
+        </header>
+        <div class="container1">
+            <form action="action_page.php">
+          
+              <label for="fname">Nombre</label>
+              <input class="entrada" type="text" id="fname" name="firstname" placeholder="Nombre">
+          
+              <label for="lname">Apellidos</label>
+              <input class="entrada" type="text" id="lname" name="lastname" placeholder="Apellidos">
+          
+              <label for="formCto">Preferencias de</label>
+              <select id="formCto" name="formCTO">
+                <option value=""></option>
+                <option value="telefono">Teléfono</option>
+                <option value="email">Email</option>
+                <option value="correo">Correo Postal</option>
+              </select>
+              <div class="telOculto">
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu Telefono" >
+              </div>
+              <div class="emailOculto">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Tu Email" >
+              </div>
+              <div class="postalOculto">
+                <label for="direccion">Dirección</label>
+                <input type="direccion" id="direccion" name="direccion" placeholder="Tu Direccion" >
+              </div>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <div class="divBoton">
+                  <input type="button" id="boton" value="Enviar">
+
+              </div>
+              <div class="divP">
+                <div id="divP">
+                  <p id="mensaje"></p>
+              </div>
+              </div>
+              
+            </form>
+          </div>
+    </div>
+    <div class="container2">
+        <div>
+            <img src="" alt="ardilla">
+        </div>
+        <div>
+            <img src="" alt="ardilla">
+        </div>
+        <div>
+            <img src="" alt="ardilla">
+        </div>
+    </div>
+</body>
+<script src="js/scriptCto.js"></script>
+</html>

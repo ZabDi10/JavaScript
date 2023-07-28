@@ -28,14 +28,18 @@ function showSlides(n) {
 }
 
 let arrayImg= new Array(4); //declarando que este array va a tener 4 elementos.
+
 arrayImg[0]=new Image(); //
-arrayImg[0].src="../14-7-zoo/ProyectoZOO/img/fotaza-leones.webp";
+arrayImg[0].src="../14-7-zoo/ProyectoZOO/img/jimmi-el-mono.webp";
 arrayImg[1]=new Image(); //
 arrayImg[1].src="../14-7-zoo/ProyectoZOO/img/leopardo.webp";
+
 arrayImg[2]=new Image(); //
-arrayImg[2].src="../14-7-zoo/ProyectoZOO/img/erizo.webp";
+arrayImg[2].src="../14-7-zoo/ProyectoZOO/img/fotaza-leones.webp";
 arrayImg[3]=new Image(); //
-arrayImg[3].src="../14-7-zoo/ProyectoZOO/img/suricato-abrazo.webp";
+arrayImg[3].src="../14-7-zoo/ProyectoZOO/img/erizo.webp";
+arrayImg[4]=new Image(); //
+arrayImg[4].src="../14-7-zoo/ProyectoZOO/img/suricato-abrazo.webp";
 
 
 
@@ -45,7 +49,7 @@ function cambiarImagen(){
   document.querySelector("#banner").src=arrayImg[contador].src;
   console.log(contador);
   contador++;
-  if (contador==4) {
+  if (contador==5) {
     contador=0;
   }
   setTimeout("cambiarImagen()", 5000);

@@ -44,6 +44,10 @@ body{
    
     
 }
+.menu a{
+  color: rgb(1, 44, 1);
+  
+}
 .imagen img{
     width: 100%;
     transform: scaleX(-1);

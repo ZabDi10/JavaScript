@@ -13,7 +13,7 @@ window.addEventListener("load", (e)=>{
     let boton = document.querySelector(".boton");
     let imc = document.querySelector("#imc").innerHTML=" ";
     let mImc = "";
-
+    let calculo;
     
 
     boton.addEventListener("click", ()=>{
@@ -33,7 +33,7 @@ window.addEventListener("load", (e)=>{
         }
         let peso = parseFloat(document.querySelector("#peso").value);
         let altura = parseFloat(document.querySelector("#altura").value);
-        let calculo = peso/Math.pow(altura,2);
+        calculo = peso/Math.pow(altura,2);
 
         console.log(calculo.toFixed(2));
 
@@ -67,9 +67,11 @@ window.addEventListener("load", (e)=>{
             }
         }
 
-        if (isEmpty(mImc)) {
+        if (isEmpty(mImc, calculo)) {
             
-            document.querySelector("#imagen").src="../IMC-05.png";
+            document.querySelector("#imagen").src="../TreceJS/IMC-05.png";
+        }else{
+            document.querySelector("#imagen").src=" ";
         }
         document.querySelector("#mensaje").innerHTML= msn;
         document.querySelector("#mensaje").style.color="red";
@@ -89,10 +91,14 @@ window.addEventListener("load", (e)=>{
 })
 
 
-function isEmpty(msg) {
-    if(msg != null){
-        return true;
+function isEmpty(msg, calculo) {
+    
+    if(calculo=="" || isNaN(calculo)){
+        return false;
         
+    }else if (msg != null) {
+        return true;
+    
     }else{
         return false;
     }
